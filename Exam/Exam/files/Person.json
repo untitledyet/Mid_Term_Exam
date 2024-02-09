@@ -1,0 +1,26 @@
+{
+  "FirstName": "John",
+  "LastName": "Doe",
+  "CardDetails": {
+    "CardNumber": "1234-5678-9012-3456",
+    "ExpirationDate": "12/25",
+    "CVC": "123"
+  },
+  "PinCode": "1234",
+  "TransactionHistory": [
+    {
+      "TransactionDate": "2024-01-03T10:15:30Z",
+      "TransactionType": "ChangePin",
+      "AmountGEL": 100,
+      "AmountUSD": 0,
+      "AmountEUR": 0
+    },
+    {
+      "TransactionDate": "2024-01-03T10:15:30Z",
+      "TransactionType": "ChangePin",
+      "AmountGEL": 200,
+      "AmountUSD": 0,
+      "AmountEUR": 0
+    }
+  ]
+}

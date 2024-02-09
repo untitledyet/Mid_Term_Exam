@@ -1,0 +1,15 @@
+/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/bin/Debug/net8.0/Exam
+/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/bin/Debug/net8.0/Exam.deps.json
+/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/bin/Debug/net8.0/Exam.runtimeconfig.json
+/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/bin/Debug/net8.0/Exam.dll
+/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/bin/Debug/net8.0/Exam.pdb
+/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/obj/Debug/net8.0/Exam.GeneratedMSBuildEditorConfig.editorconfig
+/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/obj/Debug/net8.0/Exam.AssemblyInfoInputs.cache
+/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/obj/Debug/net8.0/Exam.AssemblyInfo.cs
+/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/obj/Debug/net8.0/Exam.csproj.CoreCompileInputs.cache
+/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/obj/Debug/net8.0/Exam.sourcelink.json
+/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/obj/Debug/net8.0/Exam.dll
+/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/obj/Debug/net8.0/refint/Exam.dll
+/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/obj/Debug/net8.0/Exam.pdb
+/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/obj/Debug/net8.0/Exam.genruntimeconfig.cache
+/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/obj/Debug/net8.0/ref/Exam.dll
