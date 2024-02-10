@@ -8,9 +8,7 @@ namespace Exam
     {
         static void Main(string[] args)
         {
-            string json =
-                File.ReadAllText(
-                    "/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/files/Person.json");
+            string json = loadObject();
             Person person = JsonSerializer.Deserialize<Person>(json);
 
             Console.Write("შეიყვანეთ ბარათის ნომერი: ");
@@ -23,27 +21,47 @@ namespace Exam
             var cvc = CvcValidationInput();
 
 
-            
-            if (creditCardNumber == person.CardDetails.CardNumber && expDate == person.CardDetails.ExpirationDate && cvc == person.CardDetails.CVC)
+            if (creditCardNumber == person.CardDetails.CardNumber && expDate == person.CardDetails.ExpirationDate &&
+                cvc == person.CardDetails.CVC)
             {
                 Console.Write("PIN : ");
                 var pin = PinValidationInput();
 
-                if (pin==person.PinCode)
+                if (pin == person.PinCode)
                 {
+                    int actionNumber = 0;
+
+                    MainMenu(person.FirstName, person.LastName);
+                    
+
+                    while (actionNumber!=7)
+                    {
+                        Console.WriteLine();
+                        Console.Write("აირჩიეთ სასურველი მოქმედება: ");
+                        actionNumber = ChoosenAction();
+                        
+                        
+
+                        if (actionNumber == 1)
+                        {
+                            CurrentBalance();
+                        }
+                    }
                     
                 }
+
+
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("არასწორი PIN  ! \u274c ");
+                    Console.WriteLine("არასწორი PIN  ! ❌ ");
                 }
             }
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("ასეთი ბარათი არ არსებობს ! \u274c ");
-            } 
+                Console.WriteLine("ასეთი ბარათი არ არსებობს ! ❌ ");
+            }
 
 
             /*
@@ -63,6 +81,14 @@ namespace Exam
                 Console.WriteLine($"  Amount (USD): {transaction.AmountUSD}");
                 Console.WriteLine($"  Amount (EUR): {transaction.AmountEUR}");
             } */
+        }
+
+
+        static string loadObject()
+        {
+            var json = File.ReadAllText(
+                "/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/files/Person.json");
+            return json;
         }
 
         static string CardNumberInput()
@@ -205,14 +231,11 @@ namespace Exam
                         }
                     }
                 }
-                
             }
 
             //Console.WriteLine();
-            
+
             return expDate;
-            
-            
         }
 
         static string CvcValidationInput()
@@ -228,7 +251,6 @@ namespace Exam
                     cvc += key.KeyChar;
                     count++;
                     Console.Write(key.KeyChar);
-                    
                 }
                 else if (key.Key == ConsoleKey.Backspace && cvc.Length > 0)
                 {
@@ -260,7 +282,6 @@ namespace Exam
                     pin += key.KeyChar;
                     count++;
                     Console.Write("*");
-                    
                 }
                 else if (key.Key == ConsoleKey.Backspace && pin.Length > 0)
                 {
@@ -277,6 +298,61 @@ namespace Exam
 
             Console.WriteLine();
             return pin;
+        }
+
+        static void MainMenu(string FirstName, string LastName)
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"მოგესალმებით : {FirstName} {LastName}");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("1) ნაშთის ნახვა");
+            Console.WriteLine("2) თანხის გამოტანა ანგარიშიდან");
+            Console.WriteLine("3) ბოლო 5 ოპერაცია");
+            Console.WriteLine("4) თანხის შეტანა ანგარიშზე");
+            Console.WriteLine("5) პინ კოდის შეცვლა");
+            Console.WriteLine("6) ვალუტის კონვერტაცია");
+            Console.WriteLine("7) გამოსვლა");
+            
+        }
+
+        static int ChoosenAction()
+        {
+            while (true)
+            {
+                ConsoleKeyInfo key = Console.ReadKey(true); // Read key without displaying it
+
+                if (char.IsDigit(key.KeyChar)) // Check if entered character is a digit
+                {
+                    int input = key.KeyChar - '0'; // Convert character to integer value
+
+                    if (input >= 1 && input <= 7) // Check if input is within the desired range
+                    {
+                        return input;
+                    }
+                    else
+                    {
+                        Console.WriteLine(input + " - არ არის ნებადართული");
+                        Console.Write("აირჩიეთ სასურველი მოქმედება: ");
+                    }
+                }
+                else
+                {
+                    //Console.WriteLine("Invalid input. Please enter a digit between 1 and 7:");
+                }
+            }
+        }
+
+        static void CurrentBalance()
+        {
+            string json = loadObject();
+            Person person = JsonSerializer.Deserialize<Person>(json);
+            
+            Console.WriteLine("არჩეული მოქმედება - ნაშტის ნახვა ");
+            Console.WriteLine($"ნაშთი ანგარიშზე: ");
+            Console.WriteLine($"GEL - {person.TransactionHistory[0].AmountGEL}");
+            Console.WriteLine($"USD - {person.TransactionHistory[0].AmountUSD}");
+            Console.WriteLine($"EUR - {person.TransactionHistory[0].AmountEUR}");
         }
     }
 }
