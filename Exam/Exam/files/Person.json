@@ -9,16 +9,37 @@
   "PinCode": "1234",
   "TransactionHistory": [
     {
-      "TransactionDate": "2024-01-03T10:15:30Z",
-      "TransactionType": "ChangePin",
-      "AmountGEL": 100,
+      "TransactionDate": "2024-02-13T12:21:32.356041+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 0,
       "AmountUSD": 0,
       "AmountEUR": 0
     },
     {
-      "TransactionDate": "2024-01-03T10:15:30Z",
+      "TransactionDate": "2024-02-13T12:30:48.547731+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 0,
+      "AmountUSD": 0,
+      "AmountEUR": 0
+    },
+    {
+      "TransactionDate": "2024-02-13T12:30:58.50244+04:00",
       "TransactionType": "ChangePin",
-      "AmountGEL": 200,
+      "AmountGEL": 0,
+      "AmountUSD": 0,
+      "AmountEUR": 0
+    },
+    {
+      "TransactionDate": "2024-02-13T12:46:34.048923+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 0,
+      "AmountUSD": 0,
+      "AmountEUR": 0
+    },
+    {
+      "TransactionDate": "2024-02-13T12:46:49.73493+04:00",
+      "TransactionType": "ChangePin",
+      "AmountGEL": 0,
       "AmountUSD": 0,
       "AmountEUR": 0
     }

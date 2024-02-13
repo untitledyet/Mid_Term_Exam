@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Text.Json;
+﻿using System.Text.Json;
 
 namespace Exam
 {
@@ -8,7 +6,7 @@ namespace Exam
     {
         static void Main(string[] args)
         {
-            string json = loadObject();
+            string json = LoadObject();
             Person person = JsonSerializer.Deserialize<Person>(json);
 
             Console.Write("შეიყვანეთ ბარათის ნომერი: ");
@@ -78,7 +76,7 @@ namespace Exam
         }
 
 
-        static string loadObject()
+        static string LoadObject()
         {
             var json = File.ReadAllText(
                 "/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/files/Person.json");
@@ -319,7 +317,7 @@ namespace Exam
                 {
                     int input = key.KeyChar - '0'; // Convert character to integer value
 
-                    if (input >= 1 && input <= 7) 
+                    if (input >= 1 && input <= 7)
                     {
                         return input;
                     }
@@ -336,61 +334,77 @@ namespace Exam
             }
         }
 
-       
+
+        static void InsertTransaction(string newTransactionType, int? newAmountGEL = null, int? newAmountUSD = null,
+            int? newAmountEUR = null)
+        {
+            string json = LoadObject();
+            Person person = JsonSerializer.Deserialize<Person>(json);
+
+            // Calculate default values based on previous transaction amounts if they exist
+            decimal defaultAmountGEL =
+                person.TransactionHistory.Count > 0 ? person.TransactionHistory[^1].AmountGEL : 0;
+            decimal defaultAmountUSD =
+                person.TransactionHistory.Count > 0 ? person.TransactionHistory[^1].AmountUSD : 0;
+            decimal defaultAmountEUR =
+                person.TransactionHistory.Count > 0 ? person.TransactionHistory[^1].AmountEUR : 0;
+
+            // Use provided amounts if they are not null; otherwise, use default values
+            decimal amountGEL = newAmountGEL ?? defaultAmountGEL;
+            decimal amountUSD = newAmountUSD ?? defaultAmountUSD;
+            decimal amountEUR = newAmountEUR ?? defaultAmountEUR;
+
+            // Create a new transaction object
+            var newTransactionObject = new Transaction
+            {
+                TransactionDate = DateTime.Now,
+                TransactionType = newTransactionType,
+                AmountGEL = amountGEL,
+                AmountUSD = amountUSD,
+                AmountEUR = amountEUR
+            };
+
+
+            person.TransactionHistory.Add(newTransactionObject);
+            try
+            {
+                string updatedJson =
+                    JsonSerializer.Serialize(person, new JsonSerializerOptions { WriteIndented = true });
+                File.WriteAllText(
+                    "/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/files/Person.json",
+                    updatedJson);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+        }
+
+
 //-------------------------------------- ოპერაციები -----------------------------------------------------------
         static void DoAction(int actionNumber)
         {
-            if (actionNumber ==1 )
+            if (actionNumber == 1)
             {
                 CurrentBalance();
             }
             else if (actionNumber == 2)
             {
-                Console.WriteLine();
-                Console.WriteLine("არჩეული მოქმედება - პინის შეცვლა ");
-                Console.Write("შეიყვანეთ ახალი პინი: ");
-                string pin = "";
-                int count = 0;
-
-                while (pin.Length < 4)
-                {
-                    ConsoleKeyInfo key = Console.ReadKey(true);
-                    if (char.IsDigit(key.KeyChar))
-                    {
-                        pin += key.KeyChar;
-                        count++;
-                        Console.Write(key.KeyChar);
-                    }
-                    else if (key.Key == ConsoleKey.Backspace && pin.Length > 0)
-                    {
-                        pin = pin.Substring(0, pin.Length - 1);
-
-
-                        if (pin.Length < 4)
-                        {
-                            count--;
-                            Console.Write("\b \b");
-                        }
-                    }
-                }
-                PinChange(pin);
-                
             }
             else if (actionNumber == 3)
             {
-                
+                TransactionHistory();
             }
             else if (actionNumber == 4)
             {
-                
             }
             else if (actionNumber == 5)
             {
-                
+                PinChange();
             }
             else if (actionNumber == 6)
             {
-                
             }
             else if (actionNumber == 7)
             {
@@ -401,47 +415,123 @@ namespace Exam
                 Console.WriteLine("Something went wrong");
             }
         }
-        
+
         static void CurrentBalance()
         {
-            string json = loadObject();
+            string json = LoadObject();
             Person person = JsonSerializer.Deserialize<Person>(json);
 
-            Console.WriteLine();
-            Console.WriteLine("არჩეული მოქმედება - ნაშთის ნახვა ");
-            Console.WriteLine($"ნაშთი ანგარიშზე: ");
-            Console.WriteLine($"GEL - {person.TransactionHistory[0].AmountGEL}");
-            Console.WriteLine($"USD - {person.TransactionHistory[0].AmountUSD}");
-            Console.WriteLine($"EUR - {person.TransactionHistory[0].AmountEUR}");
-        }
-
-        static void PinChange(string newPin)
-        {
-            try
+            if (person.TransactionHistory.Count > 0)
             {
-                string json = loadObject();
-                Person person = JsonSerializer.Deserialize<Person>(json);
-
-                person.PinCode = newPin;
-                
-                string updatedJson = JsonSerializer.Serialize(person, new JsonSerializerOptions { WriteIndented = true });
-                File.WriteAllText("/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/files/Person.json", updatedJson);
-
-                
-                string newJson = loadObject();
-                Person neLoadedPerson = JsonSerializer.Deserialize<Person>(newJson);
-                if (neLoadedPerson.PinCode == newPin)
+                try
                 {
                     Console.WriteLine();
-                    Console.WriteLine("პინი წარმატებით შეიცვალა");
+                    Console.WriteLine("არჩეული მოქმედება - ნაშთის ნახვა ");
+                    Console.WriteLine($"ნაშთი ანგარიშზე: ");
+                    Console.WriteLine($"GEL - {person.TransactionHistory[0].AmountGEL}");
+                    Console.WriteLine($"USD - {person.TransactionHistory[0].AmountUSD}");
+                    Console.WriteLine($"EUR - {person.TransactionHistory[0].AmountEUR}");
+
+                    InsertTransaction("DepositCeck");
+                }
+                catch (ArgumentOutOfRangeException ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message}");
+                    // Handle the exception gracefully
+                }
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine($"ნაშთი ანგარიშზე: ");
+                Console.WriteLine($"GEL - 0");
+                Console.WriteLine($"USD - 0");
+                Console.WriteLine($"EUR - 0");
+                InsertTransaction("DepositCeck");
+            }
+        }
+
+        static void PinChange()
+        {
+            Console.WriteLine();
+            Console.WriteLine("არჩეული მოქმედება - პინის შეცვლა ");
+            Console.Write("შეიყვანეთ ახალი პინი: ");
+            string pin = "";
+            int count = 0;
+
+            while (pin.Length < 4)
+            {
+                ConsoleKeyInfo key = Console.ReadKey(true);
+                if (char.IsDigit(key.KeyChar))
+                {
+                    pin += key.KeyChar;
+                    count++;
+                    Console.Write(key.KeyChar);
+                }
+                else if (key.Key == ConsoleKey.Backspace && pin.Length > 0)
+                {
+                    pin = pin.Substring(0, pin.Length - 1);
+
+
+                    if (pin.Length < 4)
+                    {
+                        count--;
+                        Console.Write("\b \b");
+                    }
+                }
+            }
+
+            try
+            {
+                InsertTransaction(newTransactionType: "ChangePin");
+
+                string newJson = LoadObject();
+                Person neLoadedPerson = JsonSerializer.Deserialize<Person>(newJson);
+                if (neLoadedPerson.PinCode == pin)
+                {
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("პინი წარმატებით შეიცვალა  ✅ ");
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                Console.WriteLine(e.Message);
                 throw;
             }
-            
+        }
+
+        static void TransactionHistory()
+        {
+            var json = LoadObject(); 
+            Person person = JsonSerializer.Deserialize<Person>(json);
+
+            if (person.TransactionHistory != null)
+            {
+                Console.WriteLine();
+                Console.Write(new string('-', 15));
+                Console.Write(" ტრანზაქციების ისტორია  ");
+                Console.Write(new string('-', 15));
+                int startIndex = Math.Max(0, person.TransactionHistory.Count - 5); 
+                for (int i = startIndex; i < person.TransactionHistory.Count; i++)
+                {
+                    Console.WriteLine();
+                    var transaction = person.TransactionHistory[i];
+                    Console.WriteLine($"Transaction Type: {transaction.TransactionType}");
+                    Console.WriteLine($"Transaction Date: {transaction.TransactionDate}");
+                    Console.WriteLine($"Amount GEL: {transaction.AmountGEL}");
+                    Console.WriteLine($"Amount USD: {transaction.AmountUSD}");
+                    Console.WriteLine($"Amount EUR: {transaction.AmountEUR}");
+                    Console.WriteLine(); 
+                    
+                }
+            }
+            else
+            {
+                Console.WriteLine("No transaction history found.");
+            }
+
         }
     }
 }
