@@ -7,52 +7,58 @@ namespace Exam
         static void Main(string[] args)
         {
             string json = LoadObject();
-            Person person = JsonSerializer.Deserialize<Person>(json);
-
-            Console.Write("შეიყვანეთ ბარათის ნომერი: ");
-            var creditCardNumber = CardNumberInput();
-
-            Console.Write("შეიყვანეთ ბარათის მოქმედების ვადა: ");
-            var expDate = ExpiratinDateInput();
-
-            Console.Write("  CVC კოდი: ");
-            var cvc = CvcValidationInput();
-
-
-            if (creditCardNumber == person.CardDetails.CardNumber && expDate == person.CardDetails.ExpirationDate &&
-                cvc == person.CardDetails.CVC)
+            try
             {
-                Console.Write("PIN : ");
-                var pin = PinValidationInput();
+                Person person = JsonSerializer.Deserialize<Person>(json);
+                Console.Write("შეიყვანეთ ბარათის ნომერი: ");
+                var creditCardNumber = CardNumberInput();
 
-                if (pin == person.PinCode)
+                Console.Write("შეიყვანეთ ბარათის მოქმედების ვადა: ");
+                var expDate = ExpiratinDateInput();
+
+                Console.Write("  CVC კოდი: ");
+                var cvc = CvcValidationInput();
+
+                if (creditCardNumber == person.CardDetails.CardNumber && expDate == person.CardDetails.ExpirationDate &&
+                    cvc == person.CardDetails.CVC)
                 {
-                    int actionNumber = 0;
+                    Console.Write("PIN : ");
+                    var pin = PinValidationInput();
 
-                    MainMenu(person.FirstName, person.LastName);
-
-
-                    while (actionNumber != 7)
+                    if (pin == person.PinCode)
                     {
-                        Console.WriteLine();
-                        Console.Write("აირჩიეთ სასურველი მოქმედება: ");
-                        actionNumber = ChoosenAction();
+                        int actionNumber = 0;
 
-                        DoAction(actionNumber);
+                        MainMenu(person.FirstName, person.LastName);
+
+                        while (actionNumber != 7)
+                        {
+                            Console.WriteLine();
+                            Console.Write("აირჩიეთ სასურველი მოქმედება: ");
+                            actionNumber = ChoosenAction();
+
+                            Operations.DoAction(actionNumber);
+                        }
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("არასწორი PIN  ! ❌ ");
                     }
                 }
-
-
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("არასწორი PIN  ! ❌ ");
+                    Console.WriteLine("ასეთი ბარათი არ არსებობს ! ❌ ");
                 }
             }
-            else
+            catch (JsonException)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("ასეთი ბარათი არ არსებობს ! ❌ ");
+                Console.WriteLine("არასწორი JSON ფორმატი");
+            }
+            catch (Exception ex)
+            {
+                // Console.WriteLine($"მოხდა შეცდომა: {ex.Message}");
             }
 
 
@@ -76,12 +82,36 @@ namespace Exam
         }
 
 
-        static string LoadObject()
+        public static string LoadObject()
         {
-            var json = File.ReadAllText(
-                "/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/files/Person.json");
-            return json;
+            string filePath =
+                "/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/files/Person.json";
+
+            try
+            {
+                string json = File.ReadAllText(filePath);
+                return json;
+            }
+            catch (FileNotFoundException)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"File '{filePath}' not found.");
+                Console.ForegroundColor = ConsoleColor.White;
+
+                // Handle the exception by returning null or an empty string
+                return null;
+            }
+            catch (Exception e)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(e.Message);
+                Console.ForegroundColor = ConsoleColor.White;
+
+                // Handle the exception by returning null or an empty string
+                return null;
+            }
         }
+
 
         static string CardNumberInput()
         {
@@ -261,7 +291,7 @@ namespace Exam
             return cvc;
         }
 
-        static string PinValidationInput()
+        public static string PinValidationInput()
         {
             string pin = "";
             int count = 0;
@@ -292,7 +322,7 @@ namespace Exam
             return pin;
         }
 
-        static void MainMenu(string FirstName, string LastName)
+        public static void MainMenu(string FirstName, string LastName)
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Green;
@@ -335,13 +365,14 @@ namespace Exam
         }
 
 
-        static void InsertTransaction(string newTransactionType, int? newAmountGEL = null, int? newAmountUSD = null,
-            int? newAmountEUR = null)
+        public static void InsertTransaction(string newTransactionType, decimal? newAmountGEL = null,
+            decimal? newAmountUSD = null,
+            decimal? newAmountEUR = null)
         {
             string json = LoadObject();
             Person person = JsonSerializer.Deserialize<Person>(json);
 
-            // Calculate default values based on previous transaction amounts if they exist
+            
             decimal defaultAmountGEL =
                 person.TransactionHistory.Count > 0 ? person.TransactionHistory[^1].AmountGEL : 0;
             decimal defaultAmountUSD =
@@ -349,10 +380,24 @@ namespace Exam
             decimal defaultAmountEUR =
                 person.TransactionHistory.Count > 0 ? person.TransactionHistory[^1].AmountEUR : 0;
 
-            // Use provided amounts if they are not null; otherwise, use default values
+            
             decimal amountGEL = newAmountGEL ?? defaultAmountGEL;
             decimal amountUSD = newAmountUSD ?? defaultAmountUSD;
             decimal amountEUR = newAmountEUR ?? defaultAmountEUR;
+
+            
+            if (newAmountGEL.HasValue)
+            {
+                amountGEL += defaultAmountGEL;
+            }
+            else if (newAmountUSD.HasValue)
+            {
+                amountUSD += defaultAmountUSD;
+            }
+            else if (newAmountEUR.HasValue)
+            {
+                amountEUR += defaultAmountEUR;
+            }
 
             // Create a new transaction object
             var newTransactionObject = new Transaction
@@ -364,8 +409,8 @@ namespace Exam
                 AmountEUR = amountEUR
             };
 
-
             person.TransactionHistory.Add(newTransactionObject);
+
             try
             {
                 string updatedJson =
@@ -379,159 +424,6 @@ namespace Exam
                 Console.WriteLine(e.Message);
                 throw;
             }
-        }
-
-
-//-------------------------------------- ოპერაციები -----------------------------------------------------------
-        static void DoAction(int actionNumber)
-        {
-            if (actionNumber == 1)
-            {
-                CurrentBalance();
-            }
-            else if (actionNumber == 2)
-            {
-            }
-            else if (actionNumber == 3)
-            {
-                TransactionHistory();
-            }
-            else if (actionNumber == 4)
-            {
-            }
-            else if (actionNumber == 5)
-            {
-                PinChange();
-            }
-            else if (actionNumber == 6)
-            {
-            }
-            else if (actionNumber == 7)
-            {
-                Console.WriteLine("დასრულება");
-            }
-            else
-            {
-                Console.WriteLine("Something went wrong");
-            }
-        }
-
-        static void CurrentBalance()
-        {
-            string json = LoadObject();
-            Person person = JsonSerializer.Deserialize<Person>(json);
-
-            if (person.TransactionHistory.Count > 0)
-            {
-                try
-                {
-                    Console.WriteLine();
-                    Console.WriteLine("არჩეული მოქმედება - ნაშთის ნახვა ");
-                    Console.WriteLine($"ნაშთი ანგარიშზე: ");
-                    Console.WriteLine($"GEL - {person.TransactionHistory[0].AmountGEL}");
-                    Console.WriteLine($"USD - {person.TransactionHistory[0].AmountUSD}");
-                    Console.WriteLine($"EUR - {person.TransactionHistory[0].AmountEUR}");
-
-                    InsertTransaction("DepositCeck");
-                }
-                catch (ArgumentOutOfRangeException ex)
-                {
-                    Console.WriteLine($"Error: {ex.Message}");
-                    // Handle the exception gracefully
-                }
-            }
-            else
-            {
-                Console.WriteLine();
-                Console.WriteLine($"ნაშთი ანგარიშზე: ");
-                Console.WriteLine($"GEL - 0");
-                Console.WriteLine($"USD - 0");
-                Console.WriteLine($"EUR - 0");
-                InsertTransaction("DepositCeck");
-            }
-        }
-
-        static void PinChange()
-        {
-            Console.WriteLine();
-            Console.WriteLine("არჩეული მოქმედება - პინის შეცვლა ");
-            Console.Write("შეიყვანეთ ახალი პინი: ");
-            string pin = "";
-            int count = 0;
-
-            while (pin.Length < 4)
-            {
-                ConsoleKeyInfo key = Console.ReadKey(true);
-                if (char.IsDigit(key.KeyChar))
-                {
-                    pin += key.KeyChar;
-                    count++;
-                    Console.Write(key.KeyChar);
-                }
-                else if (key.Key == ConsoleKey.Backspace && pin.Length > 0)
-                {
-                    pin = pin.Substring(0, pin.Length - 1);
-
-
-                    if (pin.Length < 4)
-                    {
-                        count--;
-                        Console.Write("\b \b");
-                    }
-                }
-            }
-
-            try
-            {
-                InsertTransaction(newTransactionType: "ChangePin");
-
-                string newJson = LoadObject();
-                Person neLoadedPerson = JsonSerializer.Deserialize<Person>(newJson);
-                if (neLoadedPerson.PinCode == pin)
-                {
-                    Console.WriteLine();
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("პინი წარმატებით შეიცვალა  ✅ ");
-                    Console.ForegroundColor = ConsoleColor.White;
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                throw;
-            }
-        }
-
-        static void TransactionHistory()
-        {
-            var json = LoadObject(); 
-            Person person = JsonSerializer.Deserialize<Person>(json);
-
-            if (person.TransactionHistory != null)
-            {
-                Console.WriteLine();
-                Console.Write(new string('-', 15));
-                Console.Write(" ტრანზაქციების ისტორია  ");
-                Console.Write(new string('-', 15));
-                int startIndex = Math.Max(0, person.TransactionHistory.Count - 5); 
-                for (int i = startIndex; i < person.TransactionHistory.Count; i++)
-                {
-                    Console.WriteLine();
-                    var transaction = person.TransactionHistory[i];
-                    Console.WriteLine($"Transaction Type: {transaction.TransactionType}");
-                    Console.WriteLine($"Transaction Date: {transaction.TransactionDate}");
-                    Console.WriteLine($"Amount GEL: {transaction.AmountGEL}");
-                    Console.WriteLine($"Amount USD: {transaction.AmountUSD}");
-                    Console.WriteLine($"Amount EUR: {transaction.AmountEUR}");
-                    Console.WriteLine(); 
-                    
-                }
-            }
-            else
-            {
-                Console.WriteLine("No transaction history found.");
-            }
-
         }
     }
 }

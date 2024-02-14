@@ -9,39 +9,60 @@
   "PinCode": "1234",
   "TransactionHistory": [
     {
-      "TransactionDate": "2024-02-13T12:21:32.356041+04:00",
+      "TransactionDate": "2024-02-14T17:37:52.133+04:00",
       "TransactionType": "DepositCeck",
       "AmountGEL": 0,
       "AmountUSD": 0,
       "AmountEUR": 0
     },
     {
-      "TransactionDate": "2024-02-13T12:30:48.547731+04:00",
-      "TransactionType": "DepositCeck",
-      "AmountGEL": 0,
-      "AmountUSD": 0,
-      "AmountEUR": 0
-    },
-    {
-      "TransactionDate": "2024-02-13T12:30:58.50244+04:00",
+      "TransactionDate": "2024-02-14T17:38:22.657277+04:00",
       "TransactionType": "ChangePin",
       "AmountGEL": 0,
       "AmountUSD": 0,
       "AmountEUR": 0
     },
     {
-      "TransactionDate": "2024-02-13T12:46:34.048923+04:00",
+      "TransactionDate": "2024-02-14T17:39:00.302765+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 0,
+      "AmountUSD": 0,
+      "AmountEUR": 12
+    },
+    {
+      "TransactionDate": "2024-02-14T17:39:02.968736+04:00",
       "TransactionType": "DepositCeck",
       "AmountGEL": 0,
       "AmountUSD": 0,
-      "AmountEUR": 0
+      "AmountEUR": 12
     },
     {
-      "TransactionDate": "2024-02-13T12:46:49.73493+04:00",
-      "TransactionType": "ChangePin",
+      "TransactionDate": "2024-02-14T17:40:56.310711+04:00",
+      "TransactionType": "DepositeMonay",
       "AmountGEL": 0,
-      "AmountUSD": 0,
-      "AmountEUR": 0
+      "AmountUSD": 12,
+      "AmountEUR": 12
+    },
+    {
+      "TransactionDate": "2024-02-14T17:40:58.457661+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 0,
+      "AmountUSD": 12,
+      "AmountEUR": 12
+    },
+    {
+      "TransactionDate": "2024-02-14T17:41:06.905243+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 0,
+      "AmountUSD": 25,
+      "AmountEUR": 12
+    },
+    {
+      "TransactionDate": "2024-02-14T17:41:07.623783+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 0,
+      "AmountUSD": 25,
+      "AmountEUR": 12
     }
   ]
 }
