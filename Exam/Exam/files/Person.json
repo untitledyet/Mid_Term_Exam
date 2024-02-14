@@ -9,60 +9,95 @@
   "PinCode": "1234",
   "TransactionHistory": [
     {
-      "TransactionDate": "2024-02-14T17:37:52.133+04:00",
-      "TransactionType": "DepositCeck",
-      "AmountGEL": 0,
+      "TransactionDate": "2024-02-15T00:29:17.265239+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 100,
       "AmountUSD": 0,
       "AmountEUR": 0
     },
     {
-      "TransactionDate": "2024-02-14T17:38:22.657277+04:00",
+      "TransactionDate": "2024-02-15T00:29:22.495748+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 100,
+      "AmountUSD": 200,
+      "AmountEUR": 0
+    },
+    {
+      "TransactionDate": "2024-02-15T00:29:28.923972+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 100,
+      "AmountUSD": 200,
+      "AmountEUR": 300
+    },
+    {
+      "TransactionDate": "2024-02-15T00:29:32.467235+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 100,
+      "AmountUSD": 200,
+      "AmountEUR": 300
+    },
+    {
+      "TransactionDate": "2024-02-15T00:29:54.51926+04:00",
+      "TransactionType": "WithdrawAmount",
+      "AmountGEL": 50,
+      "AmountUSD": 200,
+      "AmountEUR": 300
+    },
+    {
+      "TransactionDate": "2024-02-15T00:29:56.654644+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 50,
+      "AmountUSD": 200,
+      "AmountEUR": 300
+    },
+    {
+      "TransactionDate": "2024-02-15T00:30:21.95115+04:00",
+      "TransactionType": "WithdrawAmount",
+      "AmountGEL": 50,
+      "AmountUSD": 150,
+      "AmountEUR": 300
+    },
+    {
+      "TransactionDate": "2024-02-15T00:30:28.521443+04:00",
+      "TransactionType": "WithdrawAmount",
+      "AmountGEL": 50,
+      "AmountUSD": 0,
+      "AmountEUR": 300
+    },
+    {
+      "TransactionDate": "2024-02-15T00:30:47.123448+04:00",
+      "TransactionType": "WithdrawAmount",
+      "AmountGEL": 50,
+      "AmountUSD": 0,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T00:30:48.396566+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 50,
+      "AmountUSD": 0,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T00:32:34.671694+04:00",
       "TransactionType": "ChangePin",
-      "AmountGEL": 0,
+      "AmountGEL": 50,
       "AmountUSD": 0,
-      "AmountEUR": 0
+      "AmountEUR": 30
     },
     {
-      "TransactionDate": "2024-02-14T17:39:00.302765+04:00",
+      "TransactionDate": "2024-02-15T00:35:29.881503+04:00",
       "TransactionType": "DepositeMonay",
-      "AmountGEL": 0,
+      "AmountGEL": 50,
       "AmountUSD": 0,
-      "AmountEUR": 12
+      "AmountEUR": 30
     },
     {
-      "TransactionDate": "2024-02-14T17:39:02.968736+04:00",
-      "TransactionType": "DepositCeck",
-      "AmountGEL": 0,
-      "AmountUSD": 0,
-      "AmountEUR": 12
-    },
-    {
-      "TransactionDate": "2024-02-14T17:40:56.310711+04:00",
+      "TransactionDate": "2024-02-15T00:35:45.102064+04:00",
       "TransactionType": "DepositeMonay",
-      "AmountGEL": 0,
-      "AmountUSD": 12,
-      "AmountEUR": 12
-    },
-    {
-      "TransactionDate": "2024-02-14T17:40:58.457661+04:00",
-      "TransactionType": "DepositCeck",
-      "AmountGEL": 0,
-      "AmountUSD": 12,
-      "AmountEUR": 12
-    },
-    {
-      "TransactionDate": "2024-02-14T17:41:06.905243+04:00",
-      "TransactionType": "DepositeMonay",
-      "AmountGEL": 0,
-      "AmountUSD": 25,
-      "AmountEUR": 12
-    },
-    {
-      "TransactionDate": "2024-02-14T17:41:07.623783+04:00",
-      "TransactionType": "DepositCeck",
-      "AmountGEL": 0,
-      "AmountUSD": 25,
-      "AmountEUR": 12
+      "AmountGEL": 50,
+      "AmountUSD": 2,
+      "AmountEUR": 30
     }
   ]
 }

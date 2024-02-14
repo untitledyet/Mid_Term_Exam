@@ -12,6 +12,7 @@ public class Operations
         }
         else if (actionNumber == 2)
         {
+            WIthdrawMonay();
         }
         else if (actionNumber == 3)
         {
@@ -165,6 +166,7 @@ public class Operations
     public static void DepositeMonay()
     {
         Console.WriteLine();
+        Console.WriteLine();
         Console.WriteLine("არჩეული მოქმედება - თანხის შეტანა ანგარიშზე.");
         Console.WriteLine("1 - GEL");
         Console.WriteLine("2 - USD");
@@ -189,22 +191,77 @@ public class Operations
                 Console.Write("შემოიტანეთ სასურველი თანხა: ");
                 
                 decimal amountGEL = DepositAmount();
-                Program.InsertTransaction("DepositeMonay", newAmountGEL: amountGEL);
+
+                if (amountGEL > 0 )
+                {
+                    Program.InsertTransaction("DepositeMonay", newAmountGEL: amountGEL);
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"დეპოზიტი {amountGEL} ✅ ");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    
+                }
+                else
+                {
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("0_ვანი ტრანზაქცია არ არის დაშვებული");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+
                 break;
+
             case 2:
+                
                 Console.WriteLine("USD");
                 Console.Write("შემოიტანეთ სასურველი თანხა: ");
                 
                 decimal amountUSD = DepositAmount();
-                Program.InsertTransaction("DepositeMonay", newAmountUSD: amountUSD);
+
+                if (amountUSD> 0 )
+                {
+                    Program.InsertTransaction("DepositeMonay", newAmountUSD: amountUSD);
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"დეპოზიტი {amountUSD} ✅ ");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                else
+                {
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("0_ვანი ტრანზაქცია არ არის დაშვებული");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                
                 break;
             case 3:
                 Console.WriteLine("EUR");
                 Console.Write("შემოიტანეთ სასურველი თანხა: ");
                 
                 decimal amountEUR = DepositAmount();
-                Program.InsertTransaction("DepositeMonay", newAmountEUR: amountEUR);
+
+                if (amountEUR > 0 )
+                {
+                    Program.InsertTransaction("DepositeMonay", newAmountEUR: amountEUR);
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"დეპოზიტი {amountEUR} ✅ ");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                else
+                {
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("0_ვანი ტრანზაქცია არ არის დაშვებული");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                
                 break;
+            
+            
+            
+                
             default:
                 Console.WriteLine("Invalid choice");
                 break;
@@ -244,5 +301,172 @@ public class Operations
             decimal.TryParse(amount, out decimal decimalAmount);
             return decimalAmount;
         }
+    }
+
+    public static void WIthdrawMonay()
+    {
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("არჩეული მოქმედება - თანხის გამოტანა.");
+        Console.WriteLine("1 - GEL");
+        Console.WriteLine("2 - USD");
+        Console.WriteLine("3 - EUR");
+        Console.Write("აირჩიეთ ვალუტა : ");
+        
+        ConsoleKeyInfo key;
+        do
+        {
+            key = Console.ReadKey(intercept: true);
+        } while (key.KeyChar != '1' && key.KeyChar != '2' && key.KeyChar != '3');
+
+        int choosenCurrency = int.Parse(key.KeyChar.ToString());
+        
+        
+        
+        
+        string json = Program.LoadObject();
+        Person person = JsonSerializer.Deserialize<Person>(json);
+                
+        decimal defaultAmountGEL =
+            person.TransactionHistory.Count > 0 ? person.TransactionHistory[^1].AmountGEL : 0;
+        decimal defaultAmountUSD =
+            person.TransactionHistory.Count > 0 ? person.TransactionHistory[^1].AmountUSD : 0;
+        decimal defaultAmountEUR =
+            person.TransactionHistory.Count > 0 ? person.TransactionHistory[^1].AmountEUR : 0;
+        
+        switch (choosenCurrency)
+        {
+            
+            
+            case 1:
+                Console.WriteLine("GEL");
+                Console.Write("გასატანი თანხა თანხა: ");
+                
+                decimal amountGEL = WithdrawAmount();
+                
+
+                if (defaultAmountGEL < -amountGEL )
+                {
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"{-amountGEL} ლარის გატანა უარყოფილია ❌  ");
+                    Console.WriteLine("მიზეზი - ანგარიშზე არ არის საკმარისი თანხა !");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                else if (amountGEL == 0)
+                {
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("0_ვანი ტრანზაქცია არ არის დაშვებული");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                else
+                {
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Program.InsertTransaction("WithdrawAmount", newAmountGEL: amountGEL);
+                    Console.WriteLine($"თქვენ წარმატებით გაანაღდეთ {-amountGEL} ლარი ✅ ");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                
+                break;
+            case 2:
+                Console.WriteLine("USD");
+                Console.Write("გასატანი თანხა: ");
+                
+                decimal amountUSD = WithdrawAmount();
+                if (defaultAmountUSD < -amountUSD )
+                {
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"{-amountUSD} დოლარის გატანა უარყოფილია ❌  ");
+                    Console.WriteLine("მიზეზი - ანგარიშზე არ არის საკმარისი თანხა !");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                else if (amountUSD == 0)
+                {
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("0_ვანი ტრანზაქცია არ არის დაშვებული");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                else
+                {
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Program.InsertTransaction("WithdrawAmount", newAmountUSD: amountUSD);
+                    Console.WriteLine($"თქვენ წარმატებით გაანაღდეთ {-amountUSD} დოლარი ✅ ");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                break;
+            case 3:
+                Console.WriteLine("EUR");
+                Console.Write("გასატანი თანხა: ");
+                
+                decimal amountEUR = WithdrawAmount();
+                if (defaultAmountEUR < -amountEUR )
+                {
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"{-amountEUR} ევროს გატანა უარყოფილია ❌  ");
+                    Console.WriteLine("მიზეზი - ანგარიშზე არ არის საკმარისი თანხა !");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                else if (amountEUR == 0)
+                {
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("0_ვანი ტრანზაქცია არ არის დაშვებული");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                else
+                {
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Program.InsertTransaction("WithdrawAmount", newAmountEUR: amountEUR);
+                    Console.WriteLine($"თქვენ წარმატებით გაანაღდეთ {-amountEUR} ევრო ✅ ");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                break;
+            default:
+                Console.WriteLine("Invalid choice");
+                break;
+        }
+
+         static decimal WithdrawAmount()
+        {
+            
+            var amount = "";
+            int amountLength = 0;
+
+            
+            
+            while (amount.Length < 6)
+            {
+                ConsoleKeyInfo inputReadKey = Console.ReadKey(true);
+
+                if (char.IsDigit(inputReadKey.KeyChar))
+                {
+                    amount += inputReadKey.KeyChar;
+                    amountLength++;
+                    Console.Write(inputReadKey.KeyChar);
+                }
+                else if (inputReadKey.Key == ConsoleKey.Backspace && amount.Length > 0)
+                {
+                    amount = amount.Substring(0, amount.Length - 1);
+                    amountLength--;
+                    Console.Write("\b \b");
+                }
+
+                if (inputReadKey.Key == ConsoleKey.Enter)
+                {
+                    break;
+                }
+            }
+
+            decimal.TryParse(amount, out decimal decimalAmount);
+            return -decimalAmount;
+        }
+        
     }
 }
