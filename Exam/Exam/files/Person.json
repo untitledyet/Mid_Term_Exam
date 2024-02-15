@@ -98,6 +98,55 @@
       "AmountGEL": 50,
       "AmountUSD": 2,
       "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T00:53:08.811013+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 50,
+      "AmountUSD": 2,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T01:11:40.553917+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 50,
+      "AmountUSD": 2,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T01:11:47.685452+04:00",
+      "TransactionType": "WithdrawAmount",
+      "AmountGEL": 30,
+      "AmountUSD": 2,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T09:43:23.20751+04:00",
+      "TransactionType": "WithdrawAmount",
+      "AmountGEL": 19.5,
+      "AmountUSD": 2,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T09:43:55.125669+04:00",
+      "TransactionType": "WithdrawAmount",
+      "AmountGEL": 6.52,
+      "AmountUSD": 2,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T09:45:33.391427+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 7.52,
+      "AmountUSD": 2,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T09:45:45.070424+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 7.52,
+      "AmountUSD": 14.34,
+      "AmountEUR": 30
     }
   ]
 }

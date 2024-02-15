@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text.Json;
 
 namespace Exam;
@@ -267,19 +268,16 @@ public class Operations
                 break;
         }
 
-         static decimal DepositAmount()
+        static decimal DepositAmount()
         {
-            
             var amount = "";
             int amountLength = 0;
 
-            
-            
             while (amount.Length < 6)
             {
                 ConsoleKeyInfo inputReadKey = Console.ReadKey(true);
 
-                if (char.IsDigit(inputReadKey.KeyChar))
+                if (char.IsDigit(inputReadKey.KeyChar) || inputReadKey.KeyChar == '.')
                 {
                     amount += inputReadKey.KeyChar;
                     amountLength++;
@@ -298,8 +296,9 @@ public class Operations
                 }
             }
 
-            decimal.TryParse(amount, out decimal decimalAmount);
+            decimal.TryParse(amount, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal decimalAmount);
             return decimalAmount;
+        
         }
     }
 
@@ -433,19 +432,16 @@ public class Operations
                 break;
         }
 
-         static decimal WithdrawAmount()
+        static decimal WithdrawAmount()
         {
-            
             var amount = "";
             int amountLength = 0;
 
-            
-            
             while (amount.Length < 6)
             {
                 ConsoleKeyInfo inputReadKey = Console.ReadKey(true);
 
-                if (char.IsDigit(inputReadKey.KeyChar))
+                if (char.IsDigit(inputReadKey.KeyChar) || inputReadKey.KeyChar == '.')
                 {
                     amount += inputReadKey.KeyChar;
                     amountLength++;
@@ -464,7 +460,7 @@ public class Operations
                 }
             }
 
-            decimal.TryParse(amount, out decimal decimalAmount);
+            decimal.TryParse(amount, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal decimalAmount);
             return -decimalAmount;
         }
         
