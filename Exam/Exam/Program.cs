@@ -4,8 +4,9 @@ namespace Exam
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
+            
             string json = LoadObject();
             try
             {
@@ -60,6 +61,8 @@ namespace Exam
             {
                 // Console.WriteLine($"მოხდა შეცდომა: {ex.Message}");
             }
+            
+            
         }
 
 

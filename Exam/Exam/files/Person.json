@@ -147,6 +147,629 @@
       "AmountGEL": 7.52,
       "AmountUSD": 14.34,
       "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T16:54:25.006046+04:00",
+      "TransactionType": "WithdrawAmount",
+      "AmountGEL": 4.52,
+      "AmountUSD": 14.34,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T16:54:25.020417+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 4.52,
+      "AmountUSD": 14.34,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:01:34.496824+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 5.52,
+      "AmountUSD": 14.34,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:01:34.516515+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 5.14,
+      "AmountUSD": 14.34,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:06:23.771513+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 5.64,
+      "AmountUSD": 14.34,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:06:23.7796+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 5.45,
+      "AmountUSD": 14.34,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:07:05.259301+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 405.45,
+      "AmountUSD": 14.34,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:07:07.63492+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 405.45,
+      "AmountUSD": 14.34,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:08:23.029357+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 418.342,
+      "AmountUSD": 14.34,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:08:23.032455+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 413,
+      "AmountUSD": 0.00,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:14:06.85651+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 413,
+      "AmountUSD": 0.00,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:14:58.115252+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 426,
+      "AmountUSD": 0.00,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:14:58.125319+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 426,
+      "AmountUSD": 0,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:16:31.758826+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 436,
+      "AmountUSD": 0,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:16:31.766324+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 436,
+      "AmountUSD": 3.78,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:17:29.456102+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 436,
+      "AmountUSD": 3.78,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:18:08.31083+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 436,
+      "AmountUSD": 3.78,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:18:35.085224+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 400,
+      "AmountUSD": 3.78,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:18:35.08746+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 400,
+      "AmountUSD": 17.37,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:58:25.110108+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 400,
+      "AmountUSD": 17.37,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:58:43.182037+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 390,
+      "AmountUSD": 17.37,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:58:43.182976+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 390,
+      "AmountUSD": 21.15,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:59:17.343287+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 390,
+      "AmountUSD": 21.15,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:59:26.595146+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 380,
+      "AmountUSD": 21.15,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T17:59:26.59646+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 380,
+      "AmountUSD": 24.93,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T18:11:34.638585+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 380,
+      "AmountUSD": 24.93,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T18:13:41.308556+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 380,
+      "AmountUSD": 24.93,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T18:13:52.027029+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 350,
+      "AmountUSD": 24.93,
+      "AmountEUR": 30
+    },
+    {
+      "TransactionDate": "2024-02-15T18:13:52.028068+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 350,
+      "AmountUSD": 24.93,
+      "AmountEUR": 41.33
+    },
+    {
+      "TransactionDate": "2024-02-15T18:19:11.985866+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 350,
+      "AmountUSD": 24.93,
+      "AmountEUR": 41.33
+    },
+    {
+      "TransactionDate": "2024-02-15T18:19:28.794293+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 350,
+      "AmountUSD": 20.00,
+      "AmountEUR": 41.33
+    },
+    {
+      "TransactionDate": "2024-02-15T18:19:28.795051+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 350,
+      "AmountUSD": 21.86,
+      "AmountEUR": 41.33
+    },
+    {
+      "TransactionDate": "2024-02-15T18:24:55.010691+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 350,
+      "AmountUSD": 21.86,
+      "AmountEUR": 41.33
+    },
+    {
+      "TransactionDate": "2024-02-15T18:25:18.271228+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 350,
+      "AmountUSD": 20.00,
+      "AmountEUR": 41.33
+    },
+    {
+      "TransactionDate": "2024-02-15T18:25:18.273933+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 350.70,
+      "AmountUSD": 20.00,
+      "AmountEUR": 41.33
+    },
+    {
+      "TransactionDate": "2024-02-15T18:28:06.056734+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 350.70,
+      "AmountUSD": 15.00,
+      "AmountEUR": 41.33
+    },
+    {
+      "TransactionDate": "2024-02-15T18:28:06.064865+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 350.70,
+      "AmountUSD": 15.00,
+      "AmountEUR": 46.00
+    },
+    {
+      "TransactionDate": "2024-02-15T18:36:09.196975+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 350.70,
+      "AmountUSD": 15.00,
+      "AmountEUR": 46.00
+    },
+    {
+      "TransactionDate": "2024-02-15T18:36:44.796622+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 350.70,
+      "AmountUSD": 15.00,
+      "AmountEUR": 40.00
+    },
+    {
+      "TransactionDate": "2024-02-15T18:36:44.800295+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 350.70,
+      "AmountUSD": 17.12,
+      "AmountEUR": 40.00
+    },
+    {
+      "TransactionDate": "2024-02-15T18:37:28.633648+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 350.70,
+      "AmountUSD": 17.12,
+      "AmountEUR": 30.00
+    },
+    {
+      "TransactionDate": "2024-02-15T18:37:28.647868+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 350.70,
+      "AmountUSD": 26.47,
+      "AmountEUR": 30.00
+    },
+    {
+      "TransactionDate": "2024-02-15T18:38:23.682702+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 350.70,
+      "AmountUSD": 26.47,
+      "AmountEUR": 20.00
+    },
+    {
+      "TransactionDate": "2024-02-15T18:38:23.700261+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 350.70,
+      "AmountUSD": 37.17,
+      "AmountEUR": 20.00
+    },
+    {
+      "TransactionDate": "2024-02-15T18:39:02.462639+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 340.70,
+      "AmountUSD": 37.17,
+      "AmountEUR": 20.00
+    },
+    {
+      "TransactionDate": "2024-02-15T18:39:02.46507+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 340.70,
+      "AmountUSD": 37.17,
+      "AmountEUR": 23.78
+    },
+    {
+      "TransactionDate": "2024-02-15T18:39:24.847791+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 330.70,
+      "AmountUSD": 37.17,
+      "AmountEUR": 23.78
+    },
+    {
+      "TransactionDate": "2024-02-15T18:39:24.849232+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 330.70,
+      "AmountUSD": 40.95,
+      "AmountEUR": 23.78
+    },
+    {
+      "TransactionDate": "2024-02-15T18:45:10.031292+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 320.70,
+      "AmountUSD": 40.95,
+      "AmountEUR": 23.78
+    },
+    {
+      "TransactionDate": "2024-02-15T18:45:10.053649+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 320.70,
+      "AmountUSD": 44.73,
+      "AmountEUR": 23.78
+    },
+    {
+      "TransactionDate": "2024-02-15T18:45:19.273435+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 310.70,
+      "AmountUSD": 44.73,
+      "AmountEUR": 23.78
+    },
+    {
+      "TransactionDate": "2024-02-15T18:45:19.27812+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 310.70,
+      "AmountUSD": 44.73,
+      "AmountEUR": 27.31
+    },
+    {
+      "TransactionDate": "2024-02-15T18:45:30.986312+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 310.70,
+      "AmountUSD": 34.73,
+      "AmountEUR": 27.31
+    },
+    {
+      "TransactionDate": "2024-02-15T18:45:30.987311+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 314.48,
+      "AmountUSD": 34.73,
+      "AmountEUR": 27.31
+    },
+    {
+      "TransactionDate": "2024-02-15T18:45:43.888925+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 314.48,
+      "AmountUSD": 34.73,
+      "AmountEUR": 17.31
+    },
+    {
+      "TransactionDate": "2024-02-15T18:45:43.891578+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 318.01,
+      "AmountUSD": 34.73,
+      "AmountEUR": 17.31
+    },
+    {
+      "TransactionDate": "2024-02-15T18:46:50.241395+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 318.01,
+      "AmountUSD": 34.73,
+      "AmountEUR": 17.31
+    },
+    {
+      "TransactionDate": "2024-02-15T18:47:01.367757+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 313.01,
+      "AmountUSD": 34.73,
+      "AmountEUR": 17.31
+    },
+    {
+      "TransactionDate": "2024-02-15T18:47:01.369271+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 500,
+      "AmountUSD": 500,
+      "AmountEUR": 500
+    },
+    {
+      "TransactionDate": "2024-02-15T18:47:46.471691+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 490,
+      "AmountUSD": 500,
+      "AmountEUR": 500
+    },
+    {
+      "TransactionDate": "2024-02-15T18:47:46.477712+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 490,
+      "AmountUSD": 503.78,
+      "AmountEUR": 500
+    },
+    {
+      "TransactionDate": "2024-02-15T18:47:58.712324+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 480,
+      "AmountUSD": 503.78,
+      "AmountEUR": 500
+    },
+    {
+      "TransactionDate": "2024-02-15T18:47:58.713116+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 480,
+      "AmountUSD": 507.56,
+      "AmountEUR": 500
+    },
+    {
+      "TransactionDate": "2024-02-15T18:48:05.037057+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 470,
+      "AmountUSD": 507.56,
+      "AmountEUR": 500
+    },
+    {
+      "TransactionDate": "2024-02-15T18:48:05.03818+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 470,
+      "AmountUSD": 507.56,
+      "AmountEUR": 503.53
+    },
+    {
+      "TransactionDate": "2024-02-15T18:48:15.152142+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 470,
+      "AmountUSD": 497.56,
+      "AmountEUR": 503.53
+    },
+    {
+      "TransactionDate": "2024-02-15T18:48:15.157659+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 496.48,
+      "AmountUSD": 497.56,
+      "AmountEUR": 503.53
+    },
+    {
+      "TransactionDate": "2024-02-15T18:48:24.371497+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 496.48,
+      "AmountUSD": 487.56,
+      "AmountEUR": 503.53
+    },
+    {
+      "TransactionDate": "2024-02-15T18:48:24.374701+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 522.96,
+      "AmountUSD": 487.56,
+      "AmountEUR": 503.53
+    },
+    {
+      "TransactionDate": "2024-02-15T18:49:22.528895+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 522.96,
+      "AmountUSD": 487.56,
+      "AmountEUR": 493.53
+    },
+    {
+      "TransactionDate": "2024-02-15T18:49:22.532252+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 551.30,
+      "AmountUSD": 487.56,
+      "AmountEUR": 493.53
+    },
+    {
+      "TransactionDate": "2024-02-15T18:49:48.989652+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 551.30,
+      "AmountUSD": 477.56,
+      "AmountEUR": 493.53
+    },
+    {
+      "TransactionDate": "2024-02-15T18:49:48.993331+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 577.78,
+      "AmountUSD": 477.56,
+      "AmountEUR": 493.53
+    },
+    {
+      "TransactionDate": "2024-02-15T18:50:01.65071+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 577.78,
+      "AmountUSD": 477.56,
+      "AmountEUR": 483.53
+    },
+    {
+      "TransactionDate": "2024-02-15T18:50:01.653481+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 606.12,
+      "AmountUSD": 477.56,
+      "AmountEUR": 483.53
+    },
+    {
+      "TransactionDate": "2024-02-15T18:50:26.950781+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 606.12,
+      "AmountUSD": 467.56,
+      "AmountEUR": 483.53
+    },
+    {
+      "TransactionDate": "2024-02-15T18:50:26.952667+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 606.12,
+      "AmountUSD": 467.56,
+      "AmountEUR": 492.88
+    },
+    {
+      "TransactionDate": "2024-02-15T18:51:18.708927+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 606.12,
+      "AmountUSD": 467.56,
+      "AmountEUR": 482.88
+    },
+    {
+      "TransactionDate": "2024-02-15T18:51:18.721238+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 606.12,
+      "AmountUSD": 478.26,
+      "AmountEUR": 482.88
+    },
+    {
+      "TransactionDate": "2024-02-15T18:53:45.394032+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 606.12,
+      "AmountUSD": 478.26,
+      "AmountEUR": 482.88
+    },
+    {
+      "TransactionDate": "2024-02-15T18:53:56.464812+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 596.12,
+      "AmountUSD": 478.26,
+      "AmountEUR": 482.88
+    },
+    {
+      "TransactionDate": "2024-02-15T18:53:56.475952+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 596.12,
+      "AmountUSD": 482.04,
+      "AmountEUR": 482.88
+    },
+    {
+      "TransactionDate": "2024-02-15T18:54:08.213912+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 596.12,
+      "AmountUSD": 472.04,
+      "AmountEUR": 482.88
+    },
+    {
+      "TransactionDate": "2024-02-15T18:54:08.214836+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 622.60,
+      "AmountUSD": 472.04,
+      "AmountEUR": 482.88
+    },
+    {
+      "TransactionDate": "2024-02-15T18:55:25.855748+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 622.60,
+      "AmountUSD": 472.04,
+      "AmountEUR": 482.88
+    },
+    {
+      "TransactionDate": "2024-02-15T18:55:42.742529+04:00",
+      "TransactionType": "WithdrawAmount",
+      "AmountGEL": 522.60,
+      "AmountUSD": 472.04,
+      "AmountEUR": 482.88
+    },
+    {
+      "TransactionDate": "2024-02-15T18:55:44.363843+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 522.60,
+      "AmountUSD": 472.04,
+      "AmountEUR": 482.88
+    },
+    {
+      "TransactionDate": "2024-02-15T18:56:35.023971+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 522.60,
+      "AmountUSD": 494.04,
+      "AmountEUR": 482.88
+    },
+    {
+      "TransactionDate": "2024-02-15T18:56:50.320949+04:00",
+      "TransactionType": "ChangePin",
+      "AmountGEL": 522.60,
+      "AmountUSD": 494.04,
+      "AmountEUR": 482.88
     }
   ]
 }
