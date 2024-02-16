@@ -40,6 +40,16 @@ public class Operations
         }
         else if (actionNumber == 7)
         {
+            
+            string json = Program.LoadObject();
+            Person person = JsonSerializer.Deserialize<Person>(json);
+            Console.Clear();
+            Program.MainMenu(person.FirstName, person.LastName);
+            
+        }
+        else if (actionNumber == 0)
+        {
+            
             Console.WriteLine("დასრულება");
             
         }

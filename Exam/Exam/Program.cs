@@ -32,17 +32,17 @@ namespace Exam
                     {
                         
                         Logger.Log("Success Authorisation");
-                        int actionNumber = 0;
+                        int? actionNumber = null;
 
                         MainMenu(person.FirstName, person.LastName);
 
-                        while (actionNumber != 7)
+                        while (actionNumber != 0)
                         {
                             Console.WriteLine();
                             Console.Write("აირჩიეთ სასურველი მოქმედება: ");
                             actionNumber = ChoosenAction();
 
-                            Operations.DoAction(actionNumber);
+                            Operations.DoAction((int)actionNumber);
                         }
                     }
                     else
@@ -323,7 +323,7 @@ namespace Exam
             Console.WriteLine("4) თანხის შეტანა ანგარიშზე");
             Console.WriteLine("5) პინ კოდის შეცვლა");
             Console.WriteLine("6) ვალუტის კონვერტაცია");
-            Console.WriteLine("7) გამოსვლა");
+            Console.WriteLine("7) მთავრაზე დაბრუნება");
         }
 
         static int ChoosenAction()
@@ -336,7 +336,7 @@ namespace Exam
                 {
                     int input = key.KeyChar - '0'; // Convert character to integer value
 
-                    if (input >= 1 && input <= 7)
+                    if ((input >= 1 && input <= 7) || input == 0 )
                     {
                         return input;
                     }

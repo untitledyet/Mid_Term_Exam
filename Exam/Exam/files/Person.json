@@ -994,6 +994,83 @@
       "AmountGEL": 522.60,
       "AmountUSD": 855.04,
       "AmountEUR": 5097.72
+    },
+    {
+      "TransactionDate": "2024-02-16T17:21:55.468529+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 522.60,
+      "AmountUSD": 855.04,
+      "AmountEUR": 5097.72
+    },
+    {
+      "TransactionDate": "2024-02-16T17:22:13.178331+04:00",
+      "TransactionType": "WithdrawAmount",
+      "AmountGEL": 522.60,
+      "AmountUSD": 855.04,
+      "AmountEUR": 97.72
+    },
+    {
+      "TransactionDate": "2024-02-16T19:43:44.542095+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 522.60,
+      "AmountUSD": 855.04,
+      "AmountEUR": 97.72
+    },
+    {
+      "TransactionDate": "2024-02-16T19:43:45.106808+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 522.60,
+      "AmountUSD": 855.04,
+      "AmountEUR": 97.72
+    },
+    {
+      "TransactionDate": "2024-02-16T19:43:58.547303+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 522.60,
+      "AmountUSD": 855.04,
+      "AmountEUR": 97.72
+    },
+    {
+      "TransactionDate": "2024-02-16T19:44:26.702159+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 291.60,
+      "AmountUSD": 855.04,
+      "AmountEUR": 97.72
+    },
+    {
+      "TransactionDate": "2024-02-16T19:44:26.708461+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 291.60,
+      "AmountUSD": 855.04,
+      "AmountEUR": 179.07
+    },
+    {
+      "TransactionDate": "2024-02-16T19:54:13.305844+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 291.60,
+      "AmountUSD": 855.04,
+      "AmountEUR": 179.07
+    },
+    {
+      "TransactionDate": "2024-02-16T19:54:19.876278+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 291.60,
+      "AmountUSD": 855.04,
+      "AmountEUR": 179.07
+    },
+    {
+      "TransactionDate": "2024-02-16T19:54:35.054717+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 423.60,
+      "AmountUSD": 855.04,
+      "AmountEUR": 179.07
+    },
+    {
+      "TransactionDate": "2024-02-16T19:54:36.399228+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 423.60,
+      "AmountUSD": 855.04,
+      "AmountEUR": 179.07
     }
   ]
 }
