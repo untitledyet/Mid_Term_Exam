@@ -13,3 +13,7 @@
 /Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/obj/Debug/net8.0/Exam.pdb
 /Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/obj/Debug/net8.0/Exam.genruntimeconfig.cache
 /Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/obj/Debug/net8.0/ref/Exam.dll
+/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/bin/Debug/net8.0/GrayNLog.dll
+/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/bin/Debug/net8.0/NLog.dll
+/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/obj/Debug/net8.0/Exam.csproj.AssemblyReference.cache
+/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/obj/Debug/net8.0/Exam.csproj.CopyComplete

@@ -7,6 +7,8 @@ namespace Exam
         static async Task Main(string[] args)
         {
             
+            Logger.Log("Application started.");
+            
             string json = LoadObject();
             try
             {
@@ -28,6 +30,8 @@ namespace Exam
 
                     if (pin == person.PinCode)
                     {
+                        
+                        Logger.Log("Success Authorisation");
                         int actionNumber = 0;
 
                         MainMenu(person.FirstName, person.LastName);
@@ -43,6 +47,7 @@ namespace Exam
                     }
                     else
                     {
+                        Logger.Log("Fail Authorisation");
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("არასწორი PIN  ! ❌ ");
                     }
@@ -82,7 +87,7 @@ namespace Exam
                 Console.WriteLine($"File '{filePath}' not found.");
                 Console.ForegroundColor = ConsoleColor.White;
 
-                // Handle the exception by returning null or an empty string
+                
                 return null;
             }
             catch (Exception e)
@@ -91,7 +96,7 @@ namespace Exam
                 Console.WriteLine(e.Message);
                 Console.ForegroundColor = ConsoleColor.White;
 
-                // Handle the exception by returning null or an empty string
+                
                 return null;
             }
         }
@@ -402,6 +407,7 @@ namespace Exam
                 File.WriteAllText(
                     "/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/files/Person.json",
                     updatedJson);
+                
             }
             catch (Exception e)
             {

@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Text.Json;
 
+
 namespace Exam;
 
 public class Operations
@@ -10,30 +11,37 @@ public class Operations
         if (actionNumber == 1)
         {
             CurrentBalance();
+            
         }
         else if (actionNumber == 2)
         {
             WithdrawMonay();
+            
         }
         else if (actionNumber == 3)
         {
             TransactionHistory();
+            
         }
         else if (actionNumber == 4)
         {
             DepositeMonay();
+            
         }
         else if (actionNumber == 5)
         {
             PinChange();
+            
         }
         else if (actionNumber == 6)
         {
             ExchangeCurrency();
+            
         }
         else if (actionNumber == 7)
         {
             Console.WriteLine("დასრულება");
+            
         }
         else
         {
@@ -74,6 +82,7 @@ public class Operations
             Console.WriteLine($"EUR - 0");
             Program.InsertTransaction("DepositCeck");
         }
+        Logger.Log("Check Balance");
     }
 
     public static void PinChange()
@@ -125,6 +134,7 @@ public class Operations
             Console.WriteLine(e.Message);
             throw;
         }
+        Logger.Log("Withdraw Money");
     }
 
     public static void TransactionHistory()
@@ -163,6 +173,7 @@ public class Operations
         {
             Console.WriteLine("No transaction history found.");
         }
+        Logger.Log("Check Transaction History");
     }
 
     public static void DepositeMonay()
@@ -296,6 +307,7 @@ public class Operations
             decimal.TryParse(amount, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal decimalAmount);
             return decimalAmount;
         }
+        Logger.Log("Deposite Money");
     }
 
     public static void WithdrawMonay()
@@ -457,6 +469,7 @@ public class Operations
             decimal.TryParse(amount, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal decimalAmount);
             return -decimalAmount;
         }
+        Logger.Log(" Withdraw Money");
     }
 
 
@@ -768,6 +781,9 @@ public class Operations
                 Console.ForegroundColor = ConsoleColor.White;
             }  
         }
+        
+        
+        Logger.Log("Exchange Currency");
 
 
         

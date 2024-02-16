@@ -770,6 +770,230 @@
       "AmountGEL": 522.60,
       "AmountUSD": 494.04,
       "AmountEUR": 482.88
+    },
+    {
+      "TransactionDate": "2024-02-16T15:39:46.448848+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 522.60,
+      "AmountUSD": 494.04,
+      "AmountEUR": 482.88
+    },
+    {
+      "TransactionDate": "2024-02-16T15:39:53.42244+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 522.60,
+      "AmountUSD": 477.04,
+      "AmountEUR": 482.88
+    },
+    {
+      "TransactionDate": "2024-02-16T15:39:53.436003+04:00",
+      "TransactionType": "ExChange_Monay",
+      "AmountGEL": 522.60,
+      "AmountUSD": 477.04,
+      "AmountEUR": 498.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:39:58.504716+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 522.60,
+      "AmountUSD": 477.04,
+      "AmountEUR": 731.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:18.622688+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 522.60,
+      "AmountUSD": 477.04,
+      "AmountEUR": 731.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:20.753568+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 522.60,
+      "AmountUSD": 477.04,
+      "AmountEUR": 731.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:21.089831+04:00",
+      "TransactionType": "WithdrawAmount",
+      "AmountGEL": 522.60,
+      "AmountUSD": 477.04,
+      "AmountEUR": 719.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:21.307151+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 522.60,
+      "AmountUSD": 477.04,
+      "AmountEUR": 719.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:21.509366+04:00",
+      "TransactionType": "WithdrawAmount",
+      "AmountGEL": 522.60,
+      "AmountUSD": 477.04,
+      "AmountEUR": 718.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:21.875244+04:00",
+      "TransactionType": "WithdrawAmount",
+      "AmountGEL": 522.60,
+      "AmountUSD": 477.04,
+      "AmountEUR": 595.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:22.039212+04:00",
+      "TransactionType": "DepositCeck",
+      "AmountGEL": 522.60,
+      "AmountUSD": 477.04,
+      "AmountEUR": 595.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:22.493402+04:00",
+      "TransactionType": "WithdrawAmount",
+      "AmountGEL": 522.60,
+      "AmountUSD": 474.04,
+      "AmountEUR": 595.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:22.965306+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 522.60,
+      "AmountUSD": 508.04,
+      "AmountEUR": 595.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:23.32686+04:00",
+      "TransactionType": "WithdrawAmount",
+      "AmountGEL": 522.60,
+      "AmountUSD": 508.04,
+      "AmountEUR": 553.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:23.792228+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 522.60,
+      "AmountUSD": 852.04,
+      "AmountEUR": 553.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:24.087893+04:00",
+      "TransactionType": "WithdrawAmount",
+      "AmountGEL": 522.60,
+      "AmountUSD": 852.04,
+      "AmountEUR": 549.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:24.395422+04:00",
+      "TransactionType": "WithdrawAmount",
+      "AmountGEL": 522.60,
+      "AmountUSD": 852.04,
+      "AmountEUR": 128.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:24.776432+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 522.60,
+      "AmountUSD": 852.04,
+      "AmountEUR": 152.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:25.704458+04:00",
+      "TransactionType": "ChangePin",
+      "AmountGEL": 522.60,
+      "AmountUSD": 852.04,
+      "AmountEUR": 152.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:26.260171+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 522.60,
+      "AmountUSD": 852.04,
+      "AmountEUR": 797.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:27.846738+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 522.60,
+      "AmountUSD": 852.04,
+      "AmountEUR": 843.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:28.103162+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 522.60,
+      "AmountUSD": 852.04,
+      "AmountEUR": 847.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:28.559196+04:00",
+      "TransactionType": "ChangePin",
+      "AmountGEL": 522.60,
+      "AmountUSD": 852.04,
+      "AmountEUR": 847.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:28.994958+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 522.60,
+      "AmountUSD": 852.04,
+      "AmountEUR": 892.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:29.449845+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 522.60,
+      "AmountUSD": 852.04,
+      "AmountEUR": 937.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:29.83779+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 522.60,
+      "AmountUSD": 852.04,
+      "AmountEUR": 982.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:30.337244+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 522.60,
+      "AmountUSD": 852.04,
+      "AmountEUR": 5516.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:30.733766+04:00",
+      "TransactionType": "ChangePin",
+      "AmountGEL": 522.60,
+      "AmountUSD": 852.04,
+      "AmountEUR": 5516.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:30.961709+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 522.60,
+      "AmountUSD": 852.04,
+      "AmountEUR": 5520.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:31.53982+04:00",
+      "TransactionType": "WithdrawAmount",
+      "AmountGEL": 522.60,
+      "AmountUSD": 818.04,
+      "AmountEUR": 5520.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:31.90194+04:00",
+      "TransactionType": "WithdrawAmount",
+      "AmountGEL": 522.60,
+      "AmountUSD": 818.04,
+      "AmountEUR": 5097.72
+    },
+    {
+      "TransactionDate": "2024-02-16T15:41:33.775756+04:00",
+      "TransactionType": "DepositeMonay",
+      "AmountGEL": 522.60,
+      "AmountUSD": 855.04,
+      "AmountEUR": 5097.72
     }
   ]
 }

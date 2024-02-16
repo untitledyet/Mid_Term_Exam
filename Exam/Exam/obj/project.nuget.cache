@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "w8xQxWQw2Xj8jP6qyZiu/PTtdY5ABIJU9dbt3neleapjogxU/8xE04Ut8hhpnJZdeLX+qk3h5m3GOCo+PpP1Ww==",
+  "dgSpecHash": "nZTS0ReVE08C7ItwZCQf0vkKIW8/O3w0Ln/Q+PVF7p416SHuj0iXjZIn/5jGuROhUCLXb7d2RxuUp+Vu5K6dxQ==",
   "success": true,
   "projectFilePath": "/Users/meskhdav/Library/CloudStorage/OneDrive-TheStarsGroup/Desktop/Mid_Term_Exam/Exam/Exam/Exam.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/meskhdav/.nuget/packages/graynlog/2.0.0/graynlog.2.0.0.nupkg.sha512",
+    "/Users/meskhdav/.nuget/packages/nlog/4.7.12/nlog.4.7.12.nupkg.sha512",
+    "/Users/meskhdav/.nuget/packages/system.text.json/5.0.2/system.text.json.5.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

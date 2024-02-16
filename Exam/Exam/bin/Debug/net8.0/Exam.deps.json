@@ -7,10 +7,34 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "Exam/1.0.0": {
+        "dependencies": {
+          "GrayNLog": "2.0.0"
+        },
         "runtime": {
           "Exam.dll": {}
         }
-      }
+      },
+      "GrayNLog/2.0.0": {
+        "dependencies": {
+          "NLog": "4.7.12",
+          "System.Text.Json": "5.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/GrayNLog.dll": {
+            "assemblyVersion": "2.0.0.33078",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "NLog/4.7.12": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.7.12.301"
+          }
+        }
+      },
+      "System.Text.Json/5.0.2": {}
     }
   },
   "libraries": {
@@ -18,6 +42,27 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "GrayNLog/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S7BjLfBiVNc1MYsi6dxiYtAb5YvHBkCxXkDp9zfGephJrFd1hGjCkzSJfjNd6EjbMf4DyEk/rfUmZDsrHyAqzw==",
+      "path": "graynlog/2.0.0",
+      "hashPath": "graynlog.2.0.0.nupkg.sha512"
+    },
+    "NLog/4.7.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cFe+YQVxghBt4hoB8IH+XVW/vyS6rWJPfWmm0rmgS/iaI3lzzFsGRzjw3VhByovLugw7Zp3kY7nVUWADCu6n2g==",
+      "path": "nlog/4.7.12",
+      "hashPath": "nlog.4.7.12.nupkg.sha512"
+    },
+    "System.Text.Json/5.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I47dVIGiV6SfAyppphxqupertT/5oZkYLDCX6vC3HpOI4ZLjyoKAreUoem2ie6G0RbRuFrlqz/PcTQjfb2DOfQ==",
+      "path": "system.text.json/5.0.2",
+      "hashPath": "system.text.json.5.0.2.nupkg.sha512"
     }
   }
 }
